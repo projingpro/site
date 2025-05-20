@@ -192,7 +192,7 @@ body {
 }
 
 .section-title {
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--white);
     margin-bottom: 1rem;
@@ -228,7 +228,7 @@ body {
 }
 
 .stat-number {
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--projing-orange);
     margin-bottom: 0.5rem;
@@ -243,11 +243,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .logo-grid-title {
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: #ff8000;
     text-transform: uppercase;
@@ -269,7 +269,7 @@ body {
     object-fit: contain;
     border-radius: 50%;
     background: var(--white);
-    padding: 0.5rem;
+    padding: 2rem;
     transition: transform 0.3s;
 }
 
@@ -289,6 +289,7 @@ body {
 
 .services .section-title {
     color: var(--projing-darkgray);
+    font-size: 1.5rem;
 }
 
 .services p {
@@ -401,7 +402,7 @@ body {
 
 .contact-grid {
     display: grid;
-    gap: 1rem; /* Reduzido para evitar espaçamento excessivo */
+    gap: 1rem;
 }
 
 .contact-image {
@@ -409,6 +410,8 @@ body {
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .contact-image h3 {
@@ -419,9 +422,12 @@ body {
 }
 
 .contact-img {
-    width: 100%; /* Ajustado para não exceder o contêiner */
-    height: 45rem;
-    object-fit: fill;
+    width: 120%;
+    max-width: min(90vw, 400px); /* Máximo de 90% da viewport ou 400px */
+    aspect-ratio: 1/1; /* Garante proporção quadrada */
+    object-fit: cover; /* Preenche sem distorção, cortando se necessário */
+    scale: 1.3;
+    margin-left: 50px;
     border-radius: 0.5rem;
     display: block;
 }
@@ -432,7 +438,7 @@ body {
     border-radius: 1rem;
     border: 1px solid rgba(252, 252, 252, 0.2);
     margin-bottom: 1.5rem;
-    max-width: 100%; /* Garante que não exceda a viewport */
+    max-width: 100%;
     box-sizing: border-box;
 }
 
@@ -483,7 +489,7 @@ body {
     padding: 1.5rem;
     border-radius: 1rem;
     border: 1px solid rgba(40, 167, 69, 0.1);
-    max-width: 100%; /* Garante que não exceda a viewport */
+    max-width: 100%;
     box-sizing: border-box;
 }
 
@@ -753,11 +759,11 @@ body {
     }
 
     .contact-img {
-        height: 15rem;
+        max-width: min(80vw, 300px); /* Reduzido para telas menores */
     }
 
     .contact-info {
-        padding: min(1rem, 4vw); /* Padding dinâmico baseado na viewport */
+        padding: min(1rem, 4vw);
     }
 
     .contact-info h3 {
@@ -771,7 +777,7 @@ body {
     }
 
     .contact-hours {
-        padding: min(1rem, 4vw); /* Padding dinâmico baseado na viewport */
+        padding: min(1rem, 4vw);
     }
 
     .footer {
@@ -818,8 +824,10 @@ body {
     }
 
     .logo-grid-title {
-        font-size: 0.9rem;
+        font-size: 1.5rem;
     }
+    
+    
 
     .logo-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -827,9 +835,9 @@ body {
     }
 
     .about-img {
-        width: 3.5rem;
-        height: 3.5rem;
-        padding: 0.3rem;
+        width: 6rem;
+        height: 6rem;
+        margin: 0.4rem;
     }
 
     .service-img {
@@ -837,16 +845,15 @@ body {
     }
 
     .contact-img {
-        width: 100%; /* Ajustado para não exceder o contêiner */
-        height: 22rem;
+        max-width: min(75vw, 250px); /* Ainda menor para telas pequenas */
     }
 
     .contact-info {
-        padding: min(0.75rem, 3vw); /* Padding ainda menor para telas pequenas */
+        padding: min(0.75rem, 3vw);
     }
 
     .contact-hours {
-        padding: min(0.75rem, 3vw); /* Padding ainda menor para telas pequenas */
+        padding: min(0.75rem, 3vw);
     }
 
     .contact-icon {
