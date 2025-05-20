@@ -478,10 +478,11 @@ body {
 }
 
 .contact-hours {
-    background: rgba(208, 255, 0, 0.1);
+     background: rgba(154, 156, 146, 0.1);
     padding: 1.5rem;
     border-radius: 1rem;
-    border: 1px solid rgba(40, 167, 69, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-right: 1rem;
 }
 
 .contact-hours h3 {
@@ -845,6 +846,13 @@ body {
     border: 1px solid rgba(252, 252, 252, 0.2);
     margin-bottom: 1.5rem;
     margin-right: 20px;
+}
+    .contact-hours {
+    background: rgba(154, 156, 146, 0.1);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-right: 1rem;
 }
 
     .whatsapp-float {
