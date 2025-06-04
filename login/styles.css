@@ -1,0 +1,1518 @@
+/* Estilos existentes mantidos */
+/* ------------------------- */
+/* Reset e Configurações Globais */
+/* ------------------------- */
+* {
+    box-sizing: border-box;
+}
+input:focus {
+    outline: none;
+    box-shadow: none;
+}
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #000, #1a0b2e);
+    color: #fff;
+    overflow-x: hidden;
+    user-select: none;
+}
+/* ------------------------- */
+/* Layout Principal */
+/* ------------------------- */
+.container {
+    display: flex;
+    height: 100vh;
+}
+/* ------------------------- */
+/* Sidebar */
+/* ------------------------- */
+.novo-orcamento-btn-desktop {
+    display: block; /* Esconde o botão desktop em telas menores */
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+.novo-orcamento-btn-mobile {
+    display:none ; /* Mostra o botão mobile em telas menores */
+}
+.main-content {
+    margin-left: 0; /* Remove margem da sidebar em mobile */
+}
+.sidebar {
+    width: 250px;
+    background: #000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    user-select: none;
+}
+.sidebar .logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 30px;
+}
+.sidebar a {
+    display: flex;
+    align-items: center;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 18px;
+    user-select: none;
+}
+.sidebar a svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.sidebar a.active {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.custom-line{
+    position: relative;
+    width: 200px;
+    height: 1.5px;
+    margin-top: 260px;
+    margin-bottom: 20px;
+
+}
+
+.sidebar .user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+   
+   
+}
+.sidebar .user img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.sidebar .user span {
+    font-size: 14px;
+    color: #ccc;
+}
+.logout-btn, .config-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: transparent;
+    color: #ccc;
+    text-align: center;
+    text-decoration: none;
+}
+.logout-btn:hover, .config-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+.logout-btn .logout-icon, .config-btn .config-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+}
+/* ------------------------- */
+/* Cabeçalho (Header) */
+/* ------------------------- */
+.header {
+    background: linear-gradient(90deg, #1a0b2e, #2e1a47);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 60px;
+}
+/* ------------------------- */
+/* Campo de Busca */
+/* ------------------------- */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+.search-container input {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 15px 0 0 15px;
+    color: #fff;
+    width: 200px;
+}
+.search-container button {
+    background: rgba(28, 1, 48, 0.5);
+    border: none;
+    padding: 8px 10px;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+}
+.search-container button svg {
+    width: 16px;
+    height: 16px;
+}
+.search-container button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+/* ------------------------- */
+/* Área de Conteúdo */
+/* ------------------------- */
+.content {
+    flex: 1;
+    padding: 10px 20px;
+
+}
+/* ------------------------- */
+/* Página de Login */
+/* ------------------------- */
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(107, 72, 255, 0.2));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px 20px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+}
+.login-card input {
+    width: calc(100% - 20px);
+    margin: 5px 10px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+.login-card button {
+    width: calc(100% - 20px);
+    margin: 10px 10px 0;
+    padding: 10px;
+    background: #6b48ff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+.login-card button:hover {
+    background: #7b58ff;
+}
+.error {
+    color: #ff3b30;
+    margin-top: 10px;
+    font-size: 14px;
+}
+/* ------------------------- */
+/* Cards Gerais e Dashboard */
+/* ------------------------- */
+.card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(107, 72, 255, 0.2));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 25px;
+    padding-right:30px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+
+    
+}
+.cardClints {
+    display:flex ;
+    flex-direction: column;
+    gap: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(107, 72, 255, 0.2));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 50px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    
+}
+
+.cardCin{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(107, 72, 255, 0.2));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 25px;
+ 
+
+    
+}
+.balance-card {
+    background: linear-gradient(135deg, #2e1a47, #1a0b2e);
+    min-height: 100px;
+    width: 420px;
+    margin-left: 97px;
+}
+.balance-card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+.balance-card .total {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+.balance-card .details {
+    font-size: 12px;
+    color: #ccc;
+}
+/* ------------------------- */
+/* Formulários Gerais */
+/* ------------------------- */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 35px;
+}
+.form-container label {
+    display: block;
+    font-size: 12px;
+    margin: 5px 10px 2px;
+}
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: calc(100% - 20px);
+    margin: 2px 10px;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+.form-container button {
+    width: calc(100% - 20px);
+    margin: 10px 10px 0;
+    padding: 8px;
+    background: #6b48ff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+#tipoCliente option,
+#incomeClient option,
+#expenseCategory option,
+#orcCliente option,
+#orcTipoServico option {
+    color: #000;
+    background: #fff;
+}
+/* ------------------------- */
+/* Lista de Clientes */
+/* ------------------------- */
+.client-list {
+    margin-top: 0;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+.client-category {
+    margin-bottom: 20px;
+}
+.client-item {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+.client-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+/* ------------------------- */
+/* Botões de Categoria */
+/* ------------------------- */
+.category-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(107, 72, 255, 0.2));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.category-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+/* ------------------------- */
+/* Popups e Janelas Modais */
+/* ------------------------- */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(107, 72, 255, 0.2));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    z-index: 10000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.popup-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+}
+.popup button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.popup .edit-btn::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>') no-repeat center;
+}
+.popup .delete-btn::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>') no-repeat center;
+}
+.popup .close-btn::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>') no-repeat center;
+}
+.popup .edit-btn:hover {
+    background: rgba(107, 72, 255, 0.2);
+}
+.popup .delete-btn:hover {
+    background: rgba(255, 59, 48, 0.2);
+}
+.popup .close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.popup-content {
+    margin-top: 40px; /* Espaço para os botões no topo */
+    width: 100%;
+}
+.search-result {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,0,0);
+    cursor: pointer;
+}
+.search-result:hover {
+    background-color: rgba(255, 255, 0.1);
+}
+.success {
+    color: #34c759;
+    margin-top: 10px;
+}
+/* ------------------------- */
+/* Financeiro e Layout das Colunas */
+/* ------------------------- */
+.finance-container {
+    display: flex;
+    gap: 20px;
+    height: calc(100% - 60px);
+}
+.left-column,
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.tab {
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.tab.active {
+    background-color: #6b48ff;
+    color: #fff;
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+.table-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+/* ------------------------- */
+/* Tabela de Transações */
+/* ------------------------- */
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.transaction-table th,
+.transaction-table td {
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+    font-size: 12px;
+}
+.transaction-table th {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.transaction-table button {
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.transaction-table .edit-btn {
+    background-color: #6b48ff;
+    color: #fff;
+}
+.transaction-table .delete-btn {
+    background-color: #ff3b30;
+    color: #fff;
+}
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+.filters input,
+.filters select {
+    width: auto150px;
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+.filters button {
+    background-color: #6b48ff;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+.balance-card {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 15px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.balance-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+.balance-card span {
+    font-weight: bold;
+}
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+.form-container button {
+    background: #6b48ff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+.form-container button:hover {
+    background: #8a67ff;
+}
+.custom-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10001;
+}
+.custom-modal-content {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(107, 72, 255, 0.2));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+.custom-modal-message {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #fff;
+}
+.custom-modal-buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.modal-ok-btn {
+    background: #6b48ff;
+    color: #fff;
+}
+.modal-ok-btn:hover {
+    background: #7b58ff;
+}
+.modal-cancel-btn {
+    background: #ff3b30;
+    color: #fff;
+}
+.modal-cancel-btn:hover {
+    background: #ff5a4e;
+}
+.orcamento-details-popup {
+    position: fixed;
+    top: 70px;
+    left: 55%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1100px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(107, 72, 255, 0.2));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 10002;
+    display: none;
+    max-height: calc(100vh - 100px);
+}
+.orcamento-details-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.orcamento-details-content {
+    flex: 3;
+    background-color: rgb(216, 215, 220);
+    color: #000;
+    padding: 40px;
+    border-radius: 8px 0 0 8px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    overflow-y: auto;
+    max-height: calc(100vh - 100px);
+}
+
+.orcamento-details-sidebar {
+    flex: 1;
+    background-color: slateblue;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+.orcamento-details-sidebar button {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s;
+}
+
+.orcamento-details-sidebar-mobile{
+    display: none;
+}
+.orcamento-details-sidebar .delete-btn:hover {
+    background: rgba(255, 59, 48, 0.2);
+}
+.orcamento-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+.orcamento-logo {
+    max-width: 150px;
+    height: auto;
+}
+.orcamento-header-left {
+    text-align: left;
+}
+.orcamento-header-left h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 5px;
+    text-transform: uppercase;
+}
+.orcamento-header-left .subtitle {
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+.orcamento-header-left .contact-info p {
+    font-size: 12px;
+    margin: 2px 0;
+}
+.orcamento-header-right {
+    text-align: right;
+}
+.orcamento-header-right h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+}
+.orcamento-header-right .date {
+    font-size: 14px;
+    margin-top: 5px;
+}
+.orcamento-section {
+    margin-bottom: 25px;
+}
+.orcamento-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+.orcamento-section p {
+    font-size: 14px;
+    margin: 0;
+}
+.orcamento-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+.orcamento-table th,
+.orcamento-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+.orcamento-table th {
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+}
+.orcamento-table td.quantity,
+.orcamento-table td.total {
+    text-align: right;
+}
+.orcamento-conditions ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+.orcamento-conditions li {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.orcamento-total {
+    text-align: right;
+    margin-top: 20px;
+}
+.orcamento-total h3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+}
+.orcamento-note h4,
+.orcamento-payment h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+.orcamento-note p,
+.orcamento-payment p {
+    font-size: 14px;
+    margin: 0;
+}
+#neworc {
+    background-color: transparent;
+}
+.orcamento-details-sidebar {
+    flex: 1;
+    background: transparent;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+.orcamento-details-sidebar button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+.orcamento-details-sidebar .delete-btn:hover {
+    background: rgba(255, 59, 48, 0.2);
+}
+.orcamento-details-sidebar .close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+/* ------------------------- */
+/* Layout de Impressão de Orçamento (PJ) */
+/* ------------------------- */
+#pj-container {
+    font-family: Arial, sans-serif;
+    width: 180mm;
+    margin: 0 auto;
+    padding: 10mm;
+    color: #000;
+    background: #fff;
+    box-sizing: border-box;
+}
+#pj-header {
+    margin-bottom: 15px;
+}
+#pj-header-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+}
+#pj-logo {
+    text-align: left;
+    max-width: 80mm;
+}
+#pj-logo img {
+    max-width: 100%;
+    height: auto;
+}
+#pj-contato {
+    text-align: right;
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 80mm;
+}
+#pj-contato strong {
+    font-size: 16px;
+    display: block;
+}
+#pj-sub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 3px solid #ea5b0d;
+    padding-top: 8px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    width: 100%;
+}
+#pj-codigo-proposta {
+    color: #ea5b0d;
+}
+.pj-section {
+    margin-bottom: 15px;
+    padding-top: 8px;
+    border-top: 2px solid #ff4400;
+    page-break-inside: avoid;
+}
+.pj-section h2 {
+    font-size: 18px;
+    color: #111;
+    margin-bottom: 8px;
+    border-left: 5px solid #ea5b0d;
+    padding-left: 8px;
+}
+.pj-section p,
+.pj-section ul li {
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 6px 0;
+}
+.pj-section ul {
+    padding-left: 15px;
+    margin-top: 8px;
+}
+.pj-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    page-break-inside: avoid;
+    word-break: break-word;
+}
+.pj-section th,
+.pj-section td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 12px;
+    text-align: left;
+}
+.pj-section th {
+    background-color: #ea5b0d;
+    color: #fff;
+}
+.pj-highlight {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 8px;
+}
+#pj-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #555;
+    page-break-before: auto;
+}
+.card .novo-orcamento-btn {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+.card .novo-orcamento-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+.novo-cliente-btn {
+    background: transparent;
+    margin: 20px;
+    margin-left: 75vw;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+.novo-cliente-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+/* ------------------------- */
+/* Painel de Tarefas */
+/* ------------------------- */
+.tasks-panel {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(107, 72, 255, 0.2));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.tasks-panel .add-task-btn {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+.tasks-panel .add-task-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+.tasks-list {
+    margin-top: 10px;
+}
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+}
+.task-item input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+.task-item span {
+    flex: 1;
+    color: #fff;
+}
+.task-actions {
+    display: flex;
+    gap: 5px;
+}
+.task-edit-btn, .task-delete-btn {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.task-edit-btn:hover {
+    background: rgba(107, 72, 255, 0.2);
+}
+.task-delete-btn:hover {
+    background: rgba(255, 59, 48, 0.2);
+}
+.add-task-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+.add-task-form input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 14px;
+}
+.edit-task-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 14px;
+}
+.task-form-buttons {
+    display: flex;
+    gap: 5px;
+}
+.task-save-btn {
+    background: #6b48ff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.task-save-btn:hover {
+    background: #7b58ff;
+}
+.task-cancel-btn {
+    background: #ff3b30;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.task-cancel-btn:hover {
+    background: #ff5a4e;
+}
+/* ------------------------- */
+/* Formulário de Cliente Simples */
+/* ------------------------- */
+.client-form {
+    max-width: 500px;
+    width: 100%;
+}
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.form-group {
+    flex: 1;
+    min-width: 0;
+}
+.form-group.half-width {
+    flex: 0 0 calc(50% - 5px);
+}
+.form-group label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 12px;
+}
+.form-group textarea {
+    height: 60px;
+    resize: vertical;
+}
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+.form-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.form-button.save-btn {
+    background: #6b48ff;
+    width:100px;
+    color: #fff;
+}
+.form-button.save-btn:hover {
+    background: #7b58ff;
+}
+.form-button.close-btn {
+    background: #ff3b30;
+    width:100px;
+    color: #fff;
+}
+.form-button.close-btn:hover {
+    background: #ff5a4e;
+}
+
+/* Novos estilos para o formulário de cliente em grid */
+/* ------------------------- */
+/* Formulário de Cliente em Grid */
+/* ------------------------- */
+.client-form-grid {
+    width: 100%;
+}
+.client-form-grid h3 {
+    margin: 0 0 15px;
+    font-size: 18px;
+    text-align: center;
+}
+.client-form-grid .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+.client-form-grid .form-group {
+    display: flex;
+    flex-direction: column;
+}
+.client-form-grid .form-group.full-width {
+    grid-column: span 2;
+}
+.client-form-grid .form-group label {
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+.client-form-grid .form-group input,
+.client-form-grid .form-group select,
+.client-form-grid .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 12px;
+}
+.client-form-grid .form-group textarea {
+    height: 80px;
+    resize: vertical;
+}
+.client-form-grid .form-buttons {
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+.client-form-grid .form-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.client-form-grid .form-button.save-btn {
+    background: #6b48ff;
+    color: #fff;
+}
+.client-form-grid .form-button.save-btn:hover {
+    background: #7b58ff;
+}
+.client-form-grid .form-button.close-btn {
+    background: #ff3b30;
+    color: #fff;
+}
+.client-form-grid .form-button.close-btn:hover {
+    background: #ff5a4e;
+}
+.client-form-grid #form-message {
+    grid-column: span 2;
+    font-size: 12px;
+    color: #34c759;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ------------------------- */
+/* Desativa Header */
+/* ------------------------- */
+.header {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mantém apenas o campo de busca */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+}
+
+.search-container input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 15px 0 0 15px;
+    color: #fff;
+    min-width: 0;
+}
+
+.search-container button {
+    background: rgba(28, 1, 48, 0.5);
+    border: none;
+    padding: 8px 10px;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* ------------------------- */
+/* Aba Clientes Responsiva */
+/* ------------------------- */
+@media (max-width: 768px) {
+    body{
+    
+        overflow-x: hidden;
+        overflow-y: hidden;   
+
+      
+    }
+
+    .bottom-nav {
+    
+        display: none;
+        justify-content: space-around;
+        align-items: center;
+        background: #0e0e0e;
+        border-radius: 25px 25px 0 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 60px;
+        z-index: 1000;
+    }
+
+    .bottom-nav a {
+        color: #bbbbbb;
+        font-size: 20px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-nav a.active {
+        color: white ;
+        background-color: #ffffff;
+        border-radius: 50%;
+        width: 40PX;
+        height: 40PX;
+        align-content:space-around;
+        padding-top: 9px;
+        transition:ease-in-out;
+    }
+    .novo-orcamento-btn-desktop {
+        display: none; /* Mostra o botão desktop em telas maiores */
+    }
+    .novo-orcamento-btn-mobile {
+        display: block; /* Esconde o botão mobile em telas maiores */
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.3s;
+    }
+    .header{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 70px;
+        
+    }
+    .search-container{
+        
+        width: 80vw;
+        height: 70px;
+    }
+    .content{
+        position: absolute;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        width: 100vw;
+        height: 75vh;
+        top: 70px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+
+    .card {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(107, 72, 255, 0.2));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 15px;
+        padding: 25px;
+        padding-right:30px;
+        width: 90vw;
+        margin-left: 0;
+   
+    }
+    .container {
+        flex-direction: column;
+      
+    }
+    .finance-container {
+        display: flex;
+        overflow-y: scroll;
+        flex-direction: column;
+        width: 100vw;
+        padding: 20px;
+        gap: 20px;
+        height:75vh;
+
+    }
+
+    .sidebar {
+        display: none; /* Esconde a sidebar no mobile */
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* Container principal dos clientes */
+    .cardClints {
+        display: flex;
+        overflow-y: scroll;
+        flex-direction: column;
+        width: 90vw;
+        height: 100vh;
+        padding: 10px;
+        gap: 20px;
+        margin: 0;
+    }
+
+    /* Botões de filtro */
+    .cardCin {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .category-button {
+        flex: 1 1 40%;
+        min-width: 120px;
+        text-align: center;
+    }
+
+    /* Cada categoria vira um bloco */
+    .client-category {
+        width: 100%;
+        border-radius: 15px;
+        padding: 15px;
+        background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(107,72,255,0.1));
+        backdrop-filter: blur(8px);
+    }
+
+    .client-category h3 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* Lista dos clientes */
+    .client-item {
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+    .novo-cliente-btn {
+        background: transparent;
+        margin: 20px;
+       
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.3s;
+    }
+
+    .orcamento-details-popup {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: transparent;
+    border-style: none;
+    transform: translatex(0);
+    width: 100vw;
+    height: 100vh;
+    z-index: 10002;
+    display: none;
+    flex-direction: column;
+    gap: 50px;
+    margin: 0px;
+
+}
+.orcamento-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+    /*Menu de orçamentos*/
+
+
+     .orcamento-details-sidebar {
+     display: none;
+    }
+    .orcamento-details-sidebar-mobile {
+    flex: 1;
+    position: relative;
+    border-radius: 15px;
+    margin: 10px;
+    max-height: 80px;
+    width: 95vw;
+    background: linear-gradient(135deg, rgba(23, 23, 23, 1), rgba(55, 55, 55, 1));
+    display: flex;
+    flex-direction:row;
+    gap: calc(100vw / 10);
+
+    padding: 20px;
+
+    }
+    .orcamento-details-sidebar-mobile button{
+    background-color: transparent;
+    border: none;
+    color: #ddd;
+    }
+
+
+}
+
