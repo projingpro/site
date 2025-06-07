@@ -1,0 +1,1010 @@
+/* ----------------------------------------- */
+/* Estilos Globais */
+/* ----------------------------------------- */
+:root {
+    --projing-orange: #e67526;
+    --projing-darkgray: #090909;
+    --projing-lightgray: #F5F5F5;
+    --projing-green: #28A745;
+    --white: #FFFFFF;
+    --gray-600: #4B5563;
+    --gray-700: #374151;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--projing-darkgray);
+    background: #F5F5F5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ----------------------------------------- */
+/* Estilos do Header */
+/* ----------------------------------------- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    padding: 0.5rem 0;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-img {
+    max-width: 100%;
+    height: 3.5rem;
+}
+
+.nav {
+    display: none;
+    gap: 3rem;
+}
+
+.nav-link {
+    color: var(--projing-darkgray);
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 4px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--projing-orange);
+}
+
+.btn-primary {
+    background: var(--projing-orange);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #e67526;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--white);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 25px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-secondary:hover {
+    background: var(--white);
+    color: var(--projing-darkgray);
+}
+
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.menu-toggle svg {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-open .nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ----------------------------------------- */
+/* Estilos da Seção Hero */
+/* ----------------------------------------- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 4rem;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.hero .container {
+    position: relative;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    animation: fadeIn 1s;
+}
+
+.hero-text {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    animation: fadeIn 1s 0.2s both;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    animation: fadeInUp 1s 0.4s both;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--white);
+    animation: bounce 2s infinite;
+}
+
+.scroll-down svg {
+    height: 1rem;
+    width: 1rem;
+}
+
+/* ----------------------------------------- */
+/* Estilos da Seção About */
+/* ----------------------------------------- */
+.about {
+    background: var(--projing-darkgray);
+    padding: 3rem 0;
+}
+
+.about-grid {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+}
+
+.section-title {
+    font-size: calc(1.5rem + 2vw);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.section-divider {
+    width: 4rem;
+    height: 0.25rem;
+    background: var(--projing-orange);
+    margin-bottom: 1rem;
+}
+
+.about p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.stat-card {
+    background: rgba(248, 247, 247, 0.05);
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--projing-orange);
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.about-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo-grid-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ff8000;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.about-img {
+    max-width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+    border-radius: 50%;
+    background: var(--white);
+    padding: 2rem;
+    transition: transform 0.3s;
+}
+
+.about-img:hover {
+    transform: scale(1.1);
+}
+
+/* ----------------------------------------- */
+/* Estilos da Seção Services */
+/* ----------------------------------------- */
+.services {
+    background: #fbfbfb;
+    padding: 5rem 0;
+}
+
+.services .text-center {
+    margin-bottom: 4rem;
+}
+
+.services .section-title {
+    color: var(--projing-darkgray);
+    font-size: calc(1.5rem + 2vw);
+}
+
+.services p {
+    color: var(--gray-600);
+    max-width: 70rem;
+    margin: 0 auto;
+    font-size: calc(0.9rem + 0.5vw);
+    line-height: 1.5;
+}
+
+.services-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.service-card {
+    position: relative;
+    background: #2c2828;
+    border-radius: 1rem;
+    color: #F5F5F5;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-0.5rem);
+}
+
+.service-img {
+    max-width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.service-card:hover .service-img {
+    transform: scale(1.05);
+}
+
+.service-content {
+    padding: 1.5rem;
+}
+
+.service-icon {
+    display: inline-flex;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    color: var(--projing-orange);
+    margin-right: 1rem;
+}
+
+.service-content h3 {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: wheat;
+    margin-bottom: 1rem;
+}
+
+.service-content p {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.service-highlights {
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    padding-top: 1rem;
+}
+
+.highlight-title {
+    font-weight: 500;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.service-highlights ul {
+    list-style: none;
+    padding-left: 1.2rem;
+}
+
+.service-highlights li {
+    background: rgba(230, 117, 38, 0.05);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    font-size: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.service-highlights svg {
+    color: var(--projing-orange);
+    height: 0.875rem;
+    width: 0.875rem;
+    margin-right: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.service-card-descr {
+    position: relative;
+    background: #2c2828;
+    border-radius: 1rem;
+    color: #F5F5F5;
+    padding: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.service-card-descr p {
+    color: #ddd9d9;
+}
+
+.service-card-tubos p {
+    color: #F5F5F5;
+}
+
+/* ----------------------------------------- */
+/* Estilos da Seção Contact */
+/* ----------------------------------------- */
+.contact {
+    background: radial-gradient(ellipse at center top, #ff8800 0%, #a34b25 30%, #000000 100%);
+    padding: 5rem 0;
+    position: relative;
+}
+
+.contact .text-center {
+    margin-bottom: 3rem;
+}
+
+.contact p {
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 65rem;
+    font-size: calc(0.9rem + 0.5vw);
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.contact-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-image {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.contact-image h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--projing-darkgray);
+    margin-bottom: 1.5rem;
+}
+
+.contact-img {
+    max-width: min(90vw, 400px);
+    width: 120%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    scale: 1.3;
+    margin-left: 50px;
+    border-radius: 0.5rem;
+    display: block;
+}
+
+.contact-info {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(252, 252, 252, 0.2);
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.contact-info ul {
+    list-style: none;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: var(--projing-orange);
+    margin-right: 1rem;
+}
+
+.contact-info p {
+    color: var(--white);
+    font-weight: 500;
+}
+
+.contact-info a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: var(--projing-orange);
+}
+
+.contact-hours {
+    background: rgba(208, 255, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(40, 167, 69, 0.1);
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-hours h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.contact-hours p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ----------------------------------------- */
+/* Estilos do Footer */
+/* ----------------------------------------- */
+.footer {
+    background: var(--projing-darkgray);
+    padding: 3rem 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-grid {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-logo {
+    max-width: 100%;
+    height: 4rem;
+    margin-bottom: 1rem;
+}
+
+.footer h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer li {
+    margin-bottom: 0.5rem;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--projing-orange);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-bottom span {
+    margin: 0 0.5rem;
+}
+
+/* ----------------------------------------- */
+/* Estilos do Botão WhatsApp */
+/* ----------------------------------------- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background: #25D366;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.whatsapp-float:hover {
+    background: #20b858;
+    transform: scale(1.1);
+}
+
+.whatsapp-icon {
+    max-width: 40px;
+    height: auto;
+    object-fit: contain;
+}
+
+.whatsapp-float.pulse {
+    transform: scale(2);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* ----------------------------------------- */
+/* Estilos Específicos da Página de Soldagem PEAD */
+/* ----------------------------------------- */
+.services p, .services ul, .services h2 {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-grid {
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-pead-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.service-card-descr {
+    position: relative;
+    background: #2c2828;
+    border-radius: 1rem;
+    color: #F5F5F5;
+    padding: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.service-card-descr p {
+    color: #ddd9d9;
+}
+
+.service-card-tubos p {
+    color: #F5F5F5;
+}
+
+/* ----------------------------------------- */
+/* Animações */
+/* ----------------------------------------- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* ----------------------------------------- */
+/* Estilos Responsivos - Desktop (≥ 768px) */
+/* ----------------------------------------- */
+@media (min-width: 768px) {
+    .nav {
+        display: flex;
+       
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-text {
+        font-size: 1.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .section-title {
+        font-size: calc(1.8rem + 1.5vw);
+    }
+
+    p {
+        font-size: calc(1rem + 0.3vw);
+    }
+
+    .whatsapp-icon {
+        max-width: 45px;
+    }
+}
+
+/* ----------------------------------------- */
+/* Estilos Responsivos - Mobile (≤ 767px) */
+/* ----------------------------------------- */
+@media (max-width: 767px) {
+    .whatsapp-float {
+        display: flex;
+    }
+
+    .nav {
+        gap: 1rem;
+        background:#374151 ;
+
+    }
+    .header {
+        background: #ffe8d3;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-text {
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        gap: 0.5rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .about {
+        padding: 2rem 0;
+    }
+
+    .about-grid {
+        gap: 1.5rem;
+    }
+
+    .section-title {
+        font-size: calc(1.3rem + 1.5vw);
+    }
+
+    .about p {
+        font-size: 0.9rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .logo-grid-title {
+        font-size: 1rem;
+    }
+
+    .logo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+    }
+
+    .about-img {
+        max-width: 4.5rem;
+        height: 4.5rem;
+        padding: 0.4rem;
+    }
+
+    .services {
+        padding: 2rem 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-img {
+        height: 9rem;
+        width: 100%;
+    }
+
+    .service-content h3 {
+        font-size: 0.9rem;
+    }
+
+    .service-content p {
+        font-size: 0.8rem;
+    }
+
+    .contact {
+        padding: 2rem 0;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .contact-img {
+        max-width: min(80vw, 300px);
+    }
+
+    .contact-info {
+        padding: min(1rem, 4vw);
+    }
+
+    .contact-info h3 {
+        font-size: 1rem;
+    }
+
+    .contact-icon {
+        width: 35px;
+        height: 35px;
+        padding: 0.5rem;
+    }
+
+    .contact-hours {
+        padding: min(1rem, 4vw);
+    }
+
+    .footer {
+        padding: 1.5rem 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .whatsapp-icon {
+        max-width: 35px;
+    }
+}
+
+/* ----------------------------------------- */
+/* Estilos Responsivos - Telas Muito Pequenas (≤ 480px) */
+/* ----------------------------------------- */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    .logo-img {
+        max-width: 80%;
+        height: 2.5rem;
+        margin-left: 1rem;
+    }
+
+    .btn-primary {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-text {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: calc(1.2rem + 1vw);
+    }
+
+    .about p {
+        font-size: 26px;
+        text-align: justify;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 1.5rem;
+    }
+
+    .logo-grid-title {
+        font-size: 1.5rem;
+    }
+
+    .logo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+
+    .about-img {
+        max-width: 6rem;
+        height: 6rem;
+        margin: 0.4rem;
+    }
+
+    .service-img {
+        height: 6rem;
+    }
+
+    .contact-img {
+        max-width: min(75vw, 250px);
+    }
+
+    .contact-info {
+        padding: min(0.75rem, 3vw);
+    }
+
+    .contact-hours {
+        padding: min(0.75rem, 3vw);
+    }
+
+    .contact-icon {
+        width: 30px;
+        height: 30px;
+        padding: 0.4rem;
+    }
+
+    .whatsapp-float {
+        bottom: 2rem;
+        right: 2rem;
+        padding: 0.5rem;
+    }
+
+    .whatsapp-icon {
+        max-width: 30px;
+    }
+
+    p {
+        font-size: calc(0.8rem + 0.3vw);
+    }
+
+    .logo-img, .footer-logo {
+        max-width: 80%;
+    }
+}
